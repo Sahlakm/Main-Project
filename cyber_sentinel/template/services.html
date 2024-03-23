@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Services
+{% endblock %}
+
+{%block content%}
+<div style="padding: 10px;">
+    <h1 class="head"> Check for Phishing</h1>
+</div>
+<div class="detect">
+    <form action="{% url 'verify' %}" method="post" id="phishingForm">
+        {% csrf_token %}
+        <input type="text" name='url' placeholder="Enter a URL" id="url">
+        <br>
+        <button type="submit">Check</button>
+    </form>
+</div>
+{% if result %}
+<script>
+    window.alert("The given url {{ result }}");
+</script>
+{% endif %}
+{% endblock %}

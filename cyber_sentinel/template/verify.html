@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Verification Result
+{% endblock %}
+
+{% block content %}
+<script>
+    window.alert("This is the variable: {{ result }}")
+</script>
+<div class="container">
+    <h2>Verification Result</h2>
+    <p>This is the variable: {{ result }}</p>
+    <!-- Add more details or actions based on the verification result -->
+</div>
+{% endblock %}

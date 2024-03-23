@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
+Home
+{% endblock %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles1.css' %}">
+</head>
+{% block content %}
+<div style="padding: 10px;">
+    <h1 class="head" >Protecting Your Digital Presence</h1>	
+    <p class="test" style="text-align: center; padding: 50px;"> At Cyber Sentinel, we provide cutting-edge technology solutions to keep your online presence safe and secure. Our focus is on protecting your digital assets so that you can focus on what matters most. With our state-of-the-art tools and dedicated team, you can rest easy knowing that your online security is in good hands.
+    </p>
+    <img src="{% static 'images/proimg1.webp' %}" alt="Lock" style="height: 600px; width: auto;" class="center">
+</div>
+{% endblock %}
